@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+*.spec
+!pysidedeploy.spec
+.e2e/
+*.log
+nuitka-crash-report.xml
+docs/screenshots/

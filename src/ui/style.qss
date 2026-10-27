@@ -1,0 +1,343 @@
+/* 桌面健康提醒｜全局样式（PRD 4.1：浅灰底、白卡片、浅蓝主色、圆角、留白） */
+
+QWidget {
+    font-family: "Microsoft YaHei UI", "Microsoft YaHei", "Segoe UI", sans-serif;
+    font-size: 13px;
+    color: #1F2A37;
+}
+
+QMainWindow,
+QWidget#root {
+    background: #F4F6FA;
+}
+
+QToolTip {
+    background: #FFFFFF;
+    color: #1F2A37;
+    border: 1px solid #DCE3ED;
+    border-radius: 6px;
+    padding: 4px 8px;
+}
+
+/* ---------- 顶部 ---------- */
+
+QLabel#appTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #16202C;
+}
+
+QLabel#statusBadge {
+    border-radius: 10px;
+    padding: 3px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    background: #EAF2FB;
+    color: #2B7CD3;
+}
+
+QLabel#statusBadge[state="paused"] {
+    background: #FFF3E1;
+    color: #B26B00;
+}
+
+/* ---------- 任务卡片 ---------- */
+
+QFrame#taskCard {
+    background: #FFFFFF;
+    border: 1px solid #E6EBF2;
+    border-radius: 12px;
+}
+
+QFrame#taskCard[cardDisabled="true"] {
+    background: #FAFBFD;
+    border-color: #EDF1F6;
+}
+
+QFrame#taskCard:hover {
+    border-color: #C8DDF4;
+}
+
+QLabel#cardIcon {
+    border-radius: 12px;
+    background: #EAF2FB;
+}
+
+QLabel#cardIcon[kind="drink"] {
+    background: #E8F6EE;
+}
+
+QLabel#cardTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: #16202C;
+}
+
+QLabel#cardDesc {
+    font-size: 13px;
+    color: #666666;
+}
+
+QLabel#cardCountdown {
+    font-size: 12px;
+    color: #999999;
+}
+
+QLabel#cardUnit {
+    font-size: 12px;
+    color: #888888;
+}
+
+QLabel#badge {
+    border-radius: 9px;
+    padding: 2px 9px;
+    font-size: 12px;
+    background: #F0F0F0;
+    color: #888888;
+}
+
+QLabel#badge[state="active"] {
+    background: #EAF2FB;
+    color: #2B7CD3;
+}
+
+QLabel#badge[state="pending"] {
+    background: #E8F6EE;
+    color: #2E9E63;
+}
+
+QLabel#badge[state="paused"],
+QLabel#badge[state="disabled"] {
+    background: #F0F0F0;
+    color: #888888;
+}
+
+QLabel#cardError {
+    color: #D64545;
+    font-size: 12px;
+}
+
+/* ---------- 输入与按钮 ---------- */
+
+QLineEdit#intervalInput {
+    background: #FBFCFE;
+    border: 1px solid #D8DFE9;
+    border-radius: 8px;
+    padding: 4px 8px;
+    font-size: 13px;
+    selection-background-color: #2B7CD3;
+}
+
+QLineEdit#intervalInput:focus {
+    background: #FFFFFF;
+    border-color: #2B7CD3;
+}
+
+QLineEdit#intervalInput[invalid="true"] {
+    background: #FFF7F7;
+    border-color: #D64545;
+}
+
+QPushButton#chip {
+    background: #F2F5F9;
+    border: 1px solid #E4EAF2;
+    border-radius: 10px;
+    padding: 2px 9px;
+    font-size: 12px;
+    color: #4A5563;
+}
+
+QPushButton#chip:hover {
+    background: #E9F1FB;
+    border-color: #BFD6F0;
+    color: #2B7CD3;
+}
+
+QPushButton#chip:checked {
+    background: #EAF2FB;
+    border-color: #2B7CD3;
+    color: #2B7CD3;
+}
+
+QPushButton#primaryButton,
+QPushButton#primarySmall {
+    background: #2B7CD3;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 7px 16px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+QPushButton#primarySmall {
+    padding: 4px 12px;
+    font-size: 12px;
+}
+
+QPushButton#primaryButton:hover,
+QPushButton#primarySmall:hover {
+    background: #2269B5;
+}
+
+QPushButton#primaryButton:pressed,
+QPushButton#primarySmall:pressed {
+    background: #1B5698;
+}
+
+QPushButton#secondaryButton {
+    background: #FFFFFF;
+    border: 1px solid #DCE3ED;
+    border-radius: 8px;
+    padding: 6px 14px;
+    color: #42505F;
+}
+
+QPushButton#secondaryButton:hover {
+    background: #F7FAFF;
+    border-color: #BFD6F0;
+    color: #2B7CD3;
+}
+
+QPushButton#secondaryButton:pressed {
+    background: #EEF4FD;
+}
+
+QPushButton#linkButton {
+    background: transparent;
+    border: none;
+    color: #2B7CD3;
+    padding: 4px 6px;
+}
+
+QPushButton#linkButton:hover {
+    color: #1B5698;
+    text-decoration: underline;
+}
+
+QCheckBox#enableSwitch {
+    font-size: 12px;
+    color: #5A6675;
+    spacing: 6px;
+}
+
+QCheckBox#enableSwitch::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 5px;
+    border: 1px solid #C9D2DE;
+    background: #FFFFFF;
+}
+
+QCheckBox#enableSwitch::indicator:hover {
+    border-color: #2B7CD3;
+}
+
+QCheckBox#enableSwitch::indicator:checked {
+    background: #2B7CD3;
+    border-color: #2B7CD3;
+}
+
+/* ---------- 底部与轻提示 ---------- */
+
+QLabel#versionLabel,
+QLabel#testGroupLabel {
+    font-size: 11px;
+    color: #9AA4B2;
+}
+
+QLabel#toast {
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 12px;
+    background: #EAF2FB;
+    color: #2B7CD3;
+}
+
+QLabel#toast[kind="error"] {
+    background: #FDECEC;
+    color: #C0392B;
+}
+
+QLabel#toast[kind="success"] {
+    background: #E8F6EE;
+    color: #2E9E63;
+}
+
+/* ---------- 设置面板 ---------- */
+
+QDialog#settingsPanel {
+    background: #FFFFFF;
+    border-radius: 12px;
+}
+
+QLabel#panelTitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #16202C;
+}
+
+QLabel#panelHint {
+    font-size: 11px;
+    color: #9AA4B2;
+}
+
+QCheckBox#panelCheck {
+    font-size: 13px;
+    color: #2C3745;
+    spacing: 8px;
+}
+
+QCheckBox#panelCheck::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 5px;
+    border: 1px solid #C9D2DE;
+    background: #FFFFFF;
+}
+
+QCheckBox#panelCheck::indicator:checked {
+    background: #2B7CD3;
+    border-color: #2B7CD3;
+}
+
+/* ---------- 卡片滚动区与「新增提醒」面板 ---------- */
+
+QScrollArea#cardsArea,
+QWidget#cardsHost {
+    background: transparent;
+    border: none;
+}
+
+QDialog#addPanel {
+    background: #FFFFFF;
+    border-radius: 12px;
+}
+
+QLabel#formLabel {
+    font-size: 12px;
+    color: #42505F;
+}
+
+QLineEdit#formInput {
+    height: 30px;
+    border: 1px solid #DCE3ED;
+    border-radius: 8px;
+    padding: 2px 10px;
+    background: #FFFFFF;
+    color: #1F2A37;
+    font-size: 13px;
+}
+
+QLineEdit#formInput:focus {
+    border: 1px solid #2B7CD3;
+}
+
+QLineEdit#formInput[invalid="true"] {
+    border: 1px solid #C0392B;
+}
+
+QLabel#formError {
+    font-size: 12px;
+    color: #C0392B;
+}
